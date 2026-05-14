@@ -8,19 +8,23 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-playball: "Playball", cursive;
 
-  --color-sage: #f3a7cd;
-  --color-paper: #FDFBF7;
+  --color-sage: #2e624c;
+  --color-paper: #fdfbf7;
 
-  --color-theme-50: #fdf7fb;
-  --color-theme-100: #f8eaf3;
-  --color-theme-200: #f1d6e8;
-  --color-theme-300: #e8bdd9;
-  --color-theme-400: #dd9ec8;
-  --color-theme-500: #f3a7cd;
-  --color-theme-600: #bc5f99;
-  --color-theme-700: #9f4c80;
-  --color-theme-800: #833f69;
-  --color-theme-900: #6c3557;
+  --color-theme-50: #f4f7f5;
+  --color-theme-100: #e2ede7;
+  --color-theme-200: #c1d6cc;
+  --color-theme-300: #9cbbae;
+  --color-theme-400: #6f9b87;
+  --color-theme-500: #2e624c;
+  --color-theme-600: #244e3d;
+  --color-theme-700: #1a3a2e;
+  --color-theme-800: #11261e;
+  --color-theme-900: #08130f;
+
+  --color-gold-light: #f2e3cc;
+  --color-gold-main: #c29d4d;
+  --color-gold-dark: #8a6c31;
 }
 
 :root {
@@ -29,7 +33,8 @@
   font-family: var(--font-montserrat);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -72,12 +77,19 @@ html, body {
   --mandala-soft-opacity: 0.16;
 }
 
+.gold-filter {
+  filter: sepia(1) saturate(1.5) brightness(1.1) contrast(1.0) hue-rotate(-10deg);
+}
+
+.dark-gold-filter {
+  filter: sepia(1) saturate(2.2) brightness(0.75) contrast(1.1) hue-rotate(-15deg);
+}
+
 .mandala-corner {
   position: absolute;
   width: clamp(300px, 38vw, 620px);
   aspect-ratio: 1 / 1;
   opacity: var(--mandala-accent-opacity);
-  filter: sepia(1) saturate(1.55) hue-rotate(285deg) brightness(1.12) contrast(1.05);
 }
 
 .mandala-corner.is-soft {
@@ -117,9 +129,9 @@ html, body {
 
 .website-shell {
   background:
-    radial-gradient(circle at 18% 14%, rgba(243, 167, 205, 0.19), transparent 38%),
-    radial-gradient(circle at 84% 72%, rgba(221, 158, 200, 0.16), transparent 42%),
-    linear-gradient(180deg, #fffdf8 0%, #fdfaf5 42%, #fffdf8 100%);
+    radial-gradient(circle at 18% 14%, rgba(46, 98, 76, 0.08), transparent 38%),
+    radial-gradient(circle at 84% 72%, rgba(26, 58, 46, 0.06), transparent 42%),
+    linear-gradient(180deg, #fdfbf7 0%, #f4f7f5 42%, #fdfbf7 100%);
 }
 
 .section-floral-overlay {
@@ -131,8 +143,8 @@ html, body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 25%, rgba(243, 167, 205, 0.16), transparent 35%),
-    radial-gradient(circle at 78% 75%, rgba(232, 189, 217, 0.14), transparent 38%);
+    radial-gradient(circle at 20% 25%, rgba(46, 98, 76, 0.08), transparent 35%),
+    radial-gradient(circle at 78% 75%, rgba(26, 58, 46, 0.06), transparent 38%);
 }
 
 .paper-grain {
@@ -218,6 +230,9 @@ html, body {
   .cv-auto {
     content-visibility: visible;
     contain-intrinsic-size: auto;
+  }
+  .mandala-mobile-hidden {
+    display: none !important;
   }
 }
 
