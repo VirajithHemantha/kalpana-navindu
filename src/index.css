@@ -231,6 +231,7 @@ body {
     content-visibility: visible;
     contain-intrinsic-size: auto;
   }
+
   .mandala-mobile-hidden {
     display: none !important;
   }
